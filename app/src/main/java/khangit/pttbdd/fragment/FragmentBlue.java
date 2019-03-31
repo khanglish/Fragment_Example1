@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class FragmentBlue extends Fragment {
     MainActivity main;
     Context context = null;
@@ -45,6 +47,7 @@ public class FragmentBlue extends Fragment {
         LinearLayout layout_blue = (LinearLayout) inflater.inflate(R.layout.layout_blue,null);
         final TextView txtBlue = layout_blue.findViewById(R.id.textViewBlue);
         ListView listView =  layout_blue.findViewById(R.id.list);
+        // List database = new DATABASE().dbList;
         ArrayAdapter<String> adapter = new ArrayAdapter<>(context,android.R.layout.simple_list_item_1,items);
         listView.setAdapter(adapter);
 
