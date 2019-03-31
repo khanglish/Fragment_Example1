@@ -50,7 +50,7 @@ public class CustomBaseAdapter extends BaseAdapter {
             row = inflater.inflate(layoutTobeInflated,parent,false);
             holder = new MyViewHolder();
             holder.text = row.findViewById(R.id.rowTextView);
-            holder.text = row.findViewById(R.id.rowImageView);
+            holder.img = row.findViewById(R.id.rowImageView);
             row.setTag(holder);
         }else{
             holder = (MyViewHolder) row.getTag();
