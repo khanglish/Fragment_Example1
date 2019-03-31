@@ -45,8 +45,9 @@ public class CustomBaseAdapter extends BaseAdapter {
 
         View row = convertView;
         if(row == null){
-            LayoutInflater inflater = ((Activity)context).getLayoutInflater();
-            row = inflater.inflate(layoutTobeInflated,null);
+            //LayoutInflater inflater = ((Activity)context).getLayoutInflater();
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            row = inflater.inflate(layoutTobeInflated,parent,false);
             holder = new MyViewHolder();
             holder.text = row.findViewById(R.id.rowTextView);
             holder.text = row.findViewById(R.id.rowImageView);

@@ -47,12 +47,13 @@ public class FragmentBlue extends Fragment {
         LinearLayout layout_blue = (LinearLayout) inflater.inflate(R.layout.layout_blue,null);
         final TextView txtBlue = layout_blue.findViewById(R.id.textViewBlue);
         ListView listView =  layout_blue.findViewById(R.id.list);
-        // List database = new DATABASE().dbList;
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(context,android.R.layout.simple_list_item_1,items);
+        List database = new DATABASE().dbList;
+        //ArrayAdapter<String> adapter = new ArrayAdapter<>(context,android.R.layout.simple_list_item_1,items);
+        CustomBaseAdapter adapter = new CustomBaseAdapter(getActivity(),R.layout.list_gui_row,database);
         listView.setAdapter(adapter);
 
-        listView.setSelection(0);
-        listView.smoothScrollToPosition(0);
+        //listView.setSelection(0);
+        // listView.smoothScrollToPosition(0);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @SuppressLint("SetTextI18n")
             @Override
