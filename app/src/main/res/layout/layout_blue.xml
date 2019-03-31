@@ -8,14 +8,15 @@
         android:id="@+id/textViewBlue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Blue Layout..."
+        android:text="@string/textViewBlue_text"
         android:textColor="#ffffffff"
         android:background="#ff0000ff"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
-        <ListView
-            android:id="@+id/listViewBlue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ListView>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#22ffff00"/>
 
 </LinearLayout>

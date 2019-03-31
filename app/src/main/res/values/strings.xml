@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Fragment</string>
+    <string name="textViewBlue_text">Blue Layout…</string>
+    <string name="rowImageView_contentDes">image left</string>
+    <string name="this_is_a_text">This is a text</string>
 </resources>

@@ -1,5 +1,6 @@
 package khangit.pttbdd.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -43,13 +44,14 @@ public class FragmentBlue extends Fragment {
 
         LinearLayout layout_blue = (LinearLayout) inflater.inflate(R.layout.layout_blue,null);
         final TextView txtBlue = layout_blue.findViewById(R.id.textViewBlue);
-        ListView listView =  layout_blue.findViewById(R.id.listViewBlue);
+        ListView listView =  layout_blue.findViewById(R.id.list);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(context,android.R.layout.simple_list_item_1,items);
         listView.setAdapter(adapter);
 
         listView.setSelection(0);
         listView.smoothScrollToPosition(0);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @SuppressLint("SetTextI18n")
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 main.onMsgFromFragToMain("BLUE-FRAG","Blue selected row=" + position);
